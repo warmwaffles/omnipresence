@@ -10,9 +10,11 @@ defmodule Omnipresence.MixProject do
       elixir: "~> 1.14",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
+      description: "A protocol for presence checking",
       dialyzer: dialyzer(),
       docs: docs(),
       name: "Omnipresence",
+      package: package(),
       source_url: "https://github.com/warmwaffles/omnipresence",
       homepage_url: "https://github.com/warmwaffles/omnipresence"
     ]
@@ -51,6 +53,24 @@ defmodule Omnipresence.MixProject do
       extras: docs_extras(),
       source_ref: "v#{@version}",
       source_url: "https://github.com/warmwaffles/omnipresence"
+    ]
+  end
+
+  defp package do
+    [
+      files: ~w(
+        lib
+        mix.exs
+        README.md
+        CHANGELOG.md
+        LICENSE
+      ),
+      name: "omnipresence",
+      licenses: ["MIT"],
+      links: %{
+        "GitHub" => "https://github.com/warmwaffles/omnipresence",
+        "Changelog" => "https://github.com/warmwaffles/omnipresence/blob/main/CHANGELOG.md"
+      }
     ]
   end
 end
