@@ -8,51 +8,51 @@ defmodule Omnipresence.CharlistTest do
 
   describe "present?/1" do
     test "''" do
-      refute Omnipresence.present?('')
+      refute Omnipresence.present?(~c"")
     end
 
     test "' '" do
-      assert Omnipresence.present?(' ')
+      assert Omnipresence.present?(~c" ")
     end
 
     test "'  '" do
-      assert Omnipresence.present?('  ')
+      assert Omnipresence.present?(~c"  ")
     end
 
     test "'a'" do
-      assert Omnipresence.present?('a')
+      assert Omnipresence.present?(~c"a")
     end
   end
 
   describe "blank?/1" do
     test "''" do
-      assert Omnipresence.blank?('')
+      assert Omnipresence.blank?(~c"")
     end
 
     test "' '" do
-      refute Omnipresence.blank?(' ')
+      refute Omnipresence.blank?(~c" ")
     end
 
     test "'  '" do
-      refute Omnipresence.blank?('  ')
+      refute Omnipresence.blank?(~c"  ")
     end
 
     test "'a'" do
-      refute Omnipresence.blank?('a')
+      refute Omnipresence.blank?(~c"a")
     end
   end
 
   describe "presence/1" do
     test "' '" do
-      assert Omnipresence.presence(' ') == ' '
+      assert Omnipresence.presence(~c" ") == ~c" "
     end
 
     test "'  '" do
-      assert Omnipresence.presence('  ') == '  '
+      assert Omnipresence.presence(~c"  ") == ~c"  "
     end
 
     test "'a'" do
-      assert Omnipresence.presence('a') == 'a'
+      assert Omnipresence.presence(~c"a") == ~c"a"
     end
   end
 end
