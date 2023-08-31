@@ -10,7 +10,7 @@ by adding `omnipresence` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:omnipresence, "~> 0.1"}
+    {:omnipresence, "~> 1.0"}
   ]
 end
 ```
