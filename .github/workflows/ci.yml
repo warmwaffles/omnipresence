@@ -46,7 +46,7 @@ jobs:
       fail-fast: false
       matrix:
         os: ["ubuntu-20.04", "windows-2019"]
-        elixir: ["1.15", 1.14", "1.13"]
+        elixir: ["1.15", "1.14", "1.13"]
         otp: ["26", "25", "24"]
         exclude:
           - otp: "25"
