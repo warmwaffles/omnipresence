@@ -7,7 +7,7 @@ defmodule Omnipresence.MixProject do
     [
       app: :omnipresence,
       version: @version,
-      elixir: "~> 1.11",
+      elixir: "~> 1.13",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       description: "A protocol for presence checking",

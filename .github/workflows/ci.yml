@@ -17,8 +17,8 @@ jobs:
     strategy:
       matrix:
         os: ["ubuntu-20.04"]
-        elixir: ["1.14"]
-        otp: ["25"]
+        elixir: ["1.15"]
+        otp: ["26"]
     steps:
       - uses: actions/checkout@v2
       - uses: erlef/setup-beam@v1
@@ -40,22 +40,17 @@ jobs:
     runs-on: ${{ matrix.os }}
     env:
       MIX_ENV: test
-      DEBUG: "1"
 
     name: Test Elixir ${{ matrix.elixir }}, OTP ${{ matrix.otp }}, OS ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
         os: ["ubuntu-20.04", "windows-2019"]
-        elixir: ["1.14", "1.13", "1.12", "1.11"]
-        otp: ["25", "24", "23"]
+        elixir: ["1.15", 1.14", "1.13"]
+        otp: ["26", "25", "24"]
         exclude:
           - otp: "25"
             os: "windows-2019"
-          - elixir: "1.12"
-            otp: "25"
-          - elixir: "1.11"
-            otp: "25"
     steps:
       - uses: actions/checkout@v2
       - uses: erlef/setup-beam@v1
