@@ -30,7 +30,8 @@ defmodule Omnipresence.MixProject do
     [
       {:credo, "~> 1.6", only: [:dev, :test], runtime: false},
       {:dialyxir, "~> 1.2.0", only: [:dev, :test], runtime: false},
-      {:ex_doc, "~> 0.29", only: :dev, runtime: false}
+      {:ex_doc, "~> 0.29", only: :dev, runtime: false},
+      {:stream_data, "~> 0.6", only: [:dev, :test]}
     ]
   end
 

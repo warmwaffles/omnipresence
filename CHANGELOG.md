@@ -1,4 +1,7 @@
 # Changelog
 
-# v0.1.0 - 2022-12-01
-- added: Initial release
+# Unreleased
+- Added more property tests
+
+# v0.1.0
+- Initial release
